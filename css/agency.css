@@ -26,8 +26,23 @@ h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
 
-section {
-  padding: 100px 0; }
+  section#recommendations {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+    
+  section#portfolio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  section#about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+/* section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+} */
   section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -169,6 +184,7 @@ header.masthead {
 #portfolio .portfolio-item {
   right: 0;
   margin: 0 0 15px; }
+
   #portfolio .portfolio-item .portfolio-link {
     position: relative;
     display: block;
@@ -305,7 +321,13 @@ header.masthead {
   .team-member p {
     margin-top: 0; }
 
+  #about-resume{
+    color: white;
+    }
+
 section#contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #36ABCD;
   background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
@@ -384,7 +406,9 @@ ul.social-buttons {
     background-color: #222222; }
     ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
       background-color: #36ABCD; }
-
+ i.fa {
+   color:white;
+ }
 .text-primary {
   color: #36ABCD !important; }
 
