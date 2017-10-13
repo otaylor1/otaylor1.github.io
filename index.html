@@ -254,30 +254,30 @@
                 <form id="contact_form" action="https://formspree.io/o.b.taylor1@gmail.com" method="POST" enctype="multipart/form-data">
 
                   <div class="row">
-                      <div class="col-sm-8">
+                          <div class="col-md-6">
+                              <div class="form-group">
                           <label for="name">Your name:</label><br />
-                          <input id="name"class="input form-control"  type="text" placeholder="Your Name *" /><br />
+                          <input id="name" class="input form-control" name="name" type="text" value="" placeholder:"Your Name" size:"100%" />
                       </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-sm-8">
+                      <div class="form-group">
                           <label for="email">Your email:</label><br />
-                          <input id="email" class="input form-control"  type="email" placeholder="Your Email *" /><br />
+                          <input id="email" class="input form-control" name="email" type="text" value="" placeholder:"Your Email Address" size="100%" />
                       </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-sm-8">
-                          <label for="number">Your number:</label><br />
-                          <input id="phone" class="input form-control"  type="tel" placeholder="Your Phone *" /><br />
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-sm-8">
+                  
+                  <div class="form-group">
+                      <label for="number">Your Number:</label><br />
+                      <input id="number" class="input form-control" name="email" type="text" value="" placeholder:"Your Phone Number" size="100%" /> 
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
                           <label for="message">Your message:</label><br />
-                          <textarea id="message" class= "input form-control" id="message" placeholder="Your Message *"></textarea><br />
+                          <textarea id="message" class="input form-control" name="message" typt="text" placeholder:"Your Message" size = "100%"></textarea>
                       </div>
                   </div>
-              
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group">
                               <div class="clearfix"></div>
                               <div class="col-lg-12 text-center">
                                 <div id="success"></div>
