@@ -27,6 +27,15 @@
     $("#portfolio5btn").click(function(){
       $("#portfolio5").modal("show");
     });
+    $("#portfolio6btn").click(function(){
+      $("#portfolio6").modal("show");
+    });
+    $("#portfolio7btn").click(function(){
+      $("#portfolio7").modal("show");
+    });
+    $("#portfolio8btn").click(function(){
+      $("#portfolio8").modal("show");
+    });
    
   });
 

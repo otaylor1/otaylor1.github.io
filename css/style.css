@@ -132,8 +132,14 @@ h3 {
 
 
 /*portfolio*/
-
-.portfolio-item {
+.portfolio .design{
+  margin-bottom:3em;
+  margin-top:2em;
+}
+.portfolio .portfolio-subhead{
+  text-align: center;
+}
+.portfolio .portfolio-item {
   position: relative;
   width: 50%;
   margin-top:1em;
@@ -157,6 +163,7 @@ h3 {
   transition: .5s ease;
   background-color: #008bb5;
   box-shadow: 0px 3px 6px;
+  cursor: pointer;
 }
 .portfolio-item:hover .overlay {
   opacity: 1;
@@ -268,4 +275,22 @@ h3 {
 }
 .contact .fa:hover{
   color:#fff;
+}
+
+
+
+
+
+@media (min-width:767px){
+  .portfolio .design{
+    margin-top:0em;
+  }
+  .portfolio .portfolio-subhead-container{
+    Display:flex
+  }
+  .portfolio .portfolio-subhead{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin:auto;
+  }
 }
