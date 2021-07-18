@@ -1,10 +1,16 @@
 /*general*/
 body {
   overflow-x: hidden;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  font-size:16px;
+  background-color: #f3f3f3;
+}
 
 p {
-  line-height: 1.75; }
+  line-height: 1.75; 
+  font-size: 1.25rem;
+  padding: 1rem;
+}
 
 a {
   color: #333;
@@ -44,7 +50,7 @@ h1 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color:#333;
-  margin-bottom:1em ;
+  margin-bottom:1.5em ;
 }
 h1 span{
   color:#fff;
@@ -91,9 +97,6 @@ h3 {
 
 
 /*marquee*/
-.marquee h1 {
-  margin-top:3em;
-}
 .marquee h3 {
   color: #fff;
   text-transform: capitalize;
@@ -101,21 +104,28 @@ h3 {
 .marquee {
   background-image: linear-gradient(to bottom right, rgb(82, 215, 255, 0.9), rgb(3, 62, 139, 0.9)),url("../img/marquee-bg.jpg");
   background-size: cover;
-  background-position: center ;
-  height:100vh;
-  margin-top:auto;
-  margin-bottom:auto;
-  padding:5em 0;
+  background-position: center;
+  height: 100vh;
+  max-height: 800px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5em 0;
+}
+.marquee .container{
+  display: table;
+  height: 100%;
+}
+.marquee .container .text-center{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 
 /*about*/
-.about{
-  padding:3em 0 1em;
-}
+
 #about img {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
 }
 .about-description {
   margin-top: auto;
@@ -126,48 +136,97 @@ h3 {
 .about .rounded-circle{
   max-width:200px;
   height:auto;
+  margin-bottom: 2rem;
 }
 
+.about .btn.dark:hover{
+  background-image: linear-gradient(to bottom right, rgb(82, 215, 255, 0.9), rgb(3, 62, 139, 0.9));
+}
 
 
 
 /*portfolio*/
-.portfolio .design{
-  margin-bottom:3em;
-  margin-top:2em;
+#portfolio{
+  background-color: #f3f3f3;
+}
+.portfolio h2{
+  margin-bottom:3rem;
+}
+.portfolio .portfolio-subhead-container{
+  margin-top: 1rem;
 }
 .portfolio .portfolio-subhead{
   text-align: center;
 }
-.portfolio .portfolio-item {
-  position: relative;
-  width: 50%;
-  margin-top:1em;
-  margin-bottom: 1em;
+.portfolio  .portfolio-item {
+  background-position: center; 
+  background-size: cover;
+  width: 100%;
+  /* height: 250px; */
+  margin-bottom: 2em;
+  margin-top: 2em;
+
 }
+h3.most-recent{
+  display: flex;
+  justify-content: center;
+}
+h3.most-recent span{
+  display: inline-flex;
+  align-items: center;
+}
+.most-recent.portfolio-item {
+  width: 100%;
+  height: auto;
+  margin-top: 0em;
+}
+.portfolio .most-recent.image{
+  width: 100%;
+  height: auto;
+}
+
 .portfolio .image {
   display: block;
   width: 100%;
   height: auto;
   box-shadow: 0px 3px 6px;
+  background-position: top; 
+  background-size: cover;
 }
+
+
+
 .portfolio .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  left: 15px;
+  right: 15px;
+  height:100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008bb5;
+  background-image: linear-gradient(to bottom right, rgb(82, 215, 255, 0.9), rgb(3, 62, 139, 0.9));
   box-shadow: 0px 3px 6px;
-  cursor: pointer;
 }
+.portfolio .overlay-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  height: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: transparent;
+  cursor: pointer;
+} 
+
 .portfolio-item:hover .overlay {
   opacity: 1;
-}
+} 
+.portfolio-item:hover .overlay-text {
+  opacity: 1;
+} 
 .portfolio .text {
   color: white;
   position: absolute;
@@ -181,17 +240,35 @@ h3 {
 .portfolio .modal-body p{
   margin-top:2em;
   margin-bottom:1em;
-}
+} 
+
+
+
+
 
 
 /*skills*/
-.skills{
-  padding:1em 0 3em;
+
+.skills {
+  display: flex;
 }
-.skills .btn.dark{
-  margin-top:1em;
+.skills h4{
+  display: flex;
+  justify-content: center;
 }
-.skills .word-slider, .skills .button{
+
+.skill-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skill-list div{
+  display: inline-flex;
+  padding: .5rem 1rem;
+}
+
+.skills .button{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,62 +282,21 @@ h3 {
   justify-content: center;
   height: 100px;
 }
-.skills .word-slider h3, .word1, .word2, .word3, .word4, .word5, .word6{
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-.skills .word-slider h3{
-  color:#333;
-}.word1, .word2, .word3, .word4, .word5, .word6{
-  position: absolute;
-  bottom:0px;
-  color: #008bb5;
-  letter-spacing: 6px;
-  opacity: 0;
-}
 
-@keyframes nextWord{
-  0%{
-    opacity: 0;
-    bottom: 40px
-  }
-  3%{
-    bottom: 0;
-    opacity: 1;
-  }
-  13%{
-    bottom: 0;
-    opacity: 1;
-  }
-  16%{
-    bottom: -40px;
-    opacity: 0;
-  }
+.about {
+  display: flex;
 }
-.word1{
-  animation: 12s nextWord 0s infinite;
-}
-.word2{
-  animation: 12s nextWord 2s infinite;
-}
-.word3{
-  animation: 12s nextWord 4s infinite;
-}
-.word4{
-  animation: 12s nextWord 6s infinite;
-}
-.word5{
-  animation: 12s nextWord 8s infinite;
-}
-.word6{
-  animation: 12s nextWord 10s infinite;
+.about h3{
+  display: flex;
+  justify-content: center;
 }
 
 
 /*contact*/
 .contact{
   background-image: linear-gradient(to bottom right, rgb(82, 215, 255, 0.9), rgb(3, 62, 139, 0.9));
-  padding-bottom: 0em;
+  padding-bottom: 1em;
+  padding-top: 5em;
   color:#fff;
 }
 .contact path{
@@ -270,7 +306,8 @@ h3 {
   margin: 2em 2em 1em;
 }
 .contact .fa{
-  font-size: 1.5em;
+  padding-top:1.5rem;
+  font-size: 2em;
   color:#333;
 }
 .contact .fa:hover{
@@ -278,8 +315,16 @@ h3 {
 }
 
 
-
-
+@media (max-width:991px){
+  .skills h4{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  .about .btn.dark{
+    margin-bottom:1em;
+  }
+}
 
 @media (min-width:767px){
   .portfolio .design{
@@ -289,8 +334,6 @@ h3 {
     Display:flex
   }
   .portfolio .portfolio-subhead{
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
     margin:auto;
   }
 }

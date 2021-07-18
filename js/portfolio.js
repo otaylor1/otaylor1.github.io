@@ -12,6 +12,9 @@
   });
 
   $(document).ready(function(){
+    $("#portfolioMRbtn").click(function(){
+      $("#portfolioMR").modal("show");
+    });
     $("#portfolio1btn").click(function(){
       $("#portfolio1").modal("show");
     });
