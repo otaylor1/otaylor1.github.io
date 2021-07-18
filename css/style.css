@@ -168,11 +168,11 @@ h3 {
 
 }
 h3.most-recent{
-  display: flex;
+  display: block;
   justify-content: center;
 }
 h3.most-recent span{
-  display: inline-flex;
+  display: block;
   align-items: center;
 }
 .most-recent.portfolio-item {
@@ -335,5 +335,14 @@ h3.most-recent span{
   }
   .portfolio .portfolio-subhead{
     margin:auto;
+  }
+}
+@media (min-width:474px){
+  h3.most-recent{
+    display:flex;
+    justify-content: center;
+  }
+  h3.most-recent span{
+    display: inline-flex;
   }
 }
