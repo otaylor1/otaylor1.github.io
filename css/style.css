@@ -295,8 +295,7 @@ h3.most-recent span{
 /*contact*/
 .contact{
   background-image: linear-gradient(to bottom right, rgb(82, 215, 255, 0.9), rgb(3, 62, 139, 0.9));
-  padding-bottom: 1em;
-  padding-top: 5em;
+  padding: 5em 0;
   color:#fff;
 }
 .contact path{
